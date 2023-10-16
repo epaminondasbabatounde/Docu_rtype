@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Developpment Section ( R-Type Video Game Project) &#8212; R_type version 1.0 documentation</title>
+    <title>Developpment Section (R-Type Video Game Project) &#8212; R_type version 1.0 documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=4f649999" />
     <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=039e1c02" />
     <script src="_static/documentation_options.js?v=5c1c9e08"></script>
@@ -32,12 +32,12 @@
           <div class="body" role="main">
             
   <section id="developpment-section-r-type-video-game-project">
-<h1>Developpment Section ( R-Type Video Game Project)<a class="headerlink" href="#developpment-section-r-type-video-game-project" title="Link to this heading">¶</a></h1>
+<h1>Developpment Section (R-Type Video Game Project)<a class="headerlink" href="#developpment-section-r-type-video-game-project" title="Link to this heading">¶</a></h1>
 <p>## Development</p>
 <p>### Contributing</p>
 <ul class="simple">
-<li><p><strong>Coding Standards</strong>: Please follow our coding standards when contributing to the project. You can find the coding style guide in the [CONTRIBUTING.md](CONTRIBUTING.md) file.</p></li>
-<li><p><strong>Code of Conduct</strong>: We adhere to a code of conduct to ensure a friendly and inclusive community. Please read our [Code of Conduct](CODE_OF_CONDUCT.md) before contributing.</p></li>
+<li><p><strong>Coding Standards</strong>: Please follow our coding standards when contributing to the project. Refer to the [CONTRIBUTING.md](CONTRIBUTING.md) file for the coding style guide.</p></li>
+<li><p><strong>Code of Conduct</strong>: We adhere to a code of conduct to ensure a friendly and inclusive community. Review our [Code of Conduct](CODE_OF_CONDUCT.md) before contributing.</p></li>
 <li><dl class="simple">
 <dt><strong>Submitting Contributions</strong>: To contribute to this project, follow these steps:</dt><dd><ol class="arabic simple">
 <li><p>Fork the repository.</p></li>
@@ -89,10 +89,148 @@
 <p>## API Reference</p>
 <p>### Game Engine</p>
 <ul class="simple">
-<li><p><strong>Class Descriptions</strong>: Detailed descriptions of the core game engine classes, including <cite>Game</cite>, <cite>Player</cite>, and <cite>Enemy</cite>.</p></li>
-<li><p><strong>Functions</strong>: Documented functions and methods available in the game engine, including <cite>startGame()</cite>, <cite>updatePlayerPosition()</cite>, and <cite>spawnEnemy()</cite>.</p></li>
-<li><p><strong>How to Use</strong>: Practical examples and use cases to help you understand how to use the game engine components in your own code.</p></li>
+<li><dl class="simple">
+<dt><strong>AComponent</strong>:</dt><dd><ul>
+<li><p>This is an abstract base class for components in the ECS. It provides common functionality for derived component classes.</p></li>
+<li><dl class="simple">
+<dt>Key Elements:</dt><dd><ul>
+<li><p><cite>getType()</cite>: Returns the type of the component.</p></li>
+<li><p><cite>setType(newType)</cite>: Sets the type of the component.</p></li>
 </ul>
+</dd>
+</dl>
+</li>
+<li><p>Derived Classes: Health, Position, Speed, Body.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Health</strong>:</dt><dd><ul>
+<li><p>Represents the health component for entities.</p></li>
+<li><dl class="simple">
+<dt>Key Elements:</dt><dd><ul>
+<li><p><cite>_health</cite>: Stores the current health value.</p></li>
+<li><p><cite>set_health(hp)</cite>: Sets the health value.</p></li>
+<li><p><cite>get_health()</cite>: Gets the current health value.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Derived from: AComponent.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Position</strong>:</dt><dd><ul>
+<li><p>Represents the position component for entities.</p></li>
+<li><dl class="simple">
+<dt>Key Elements:</dt><dd><ul>
+<li><p><cite>_x</cite> and <cite>_y</cite>: Store the X and Y coordinates of the position.</p></li>
+<li><p><cite>set_x(x)</cite> and <cite>set_y(y)</cite>: Set X and Y coordinates.</p></li>
+<li><p><cite>get_x()</cite> and <cite>get_y()</cite>: Get X and Y coordinates.</p></li>
+<li><p><cite>get_position()</cite>: Get the position as a pair of X and Y coordinates.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Derived from: AComponent.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Speed</strong>:</dt><dd><ul>
+<li><p>Represents the speed component for entities.</p></li>
+<li><dl class="simple">
+<dt>Key Elements:</dt><dd><ul>
+<li><p><cite>_speed</cite>: Stores the speed value.</p></li>
+<li><p><cite>set_speed(spd)</cite>: Sets the speed value.</p></li>
+<li><p><cite>get_speed()</cite>: Gets the speed value.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Derived from: AComponent.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Body</strong>:</dt><dd><ul>
+<li><p>Represents the body component for entities with graphical representations.</p></li>
+<li><dl class="simple">
+<dt>Key Elements:</dt><dd><ul>
+<li><p><cite>Rec_Sprite</cite>, <cite>P_texture</cite>, <cite>P_sprite</cite>, <cite>Name</cite>, <cite>clock</cite>: Store graphical information.</p></li>
+<li><p>Methods to manage the graphical representation.</p></li>
+<li><p><cite>draw_playerWindow(window)</cite>: Draws the entity in a game window.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Derived from: AComponent.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>All_comps</strong>:</dt><dd><ul>
+<li><p>An empty class that doesn’t seem to have specific functionality provided in the code snippet.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Comps (Enum)</strong>:</dt><dd><ul>
+<li><p>An enumeration defining various component types such as HEALTH, BODY, POSITION, etc.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Action (Enum)</strong>:</dt><dd><ul>
+<li><p>An enumeration defining various actions, like Up, Down, Left, Right, Fire.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>entitymanager</strong>:</dt><dd><ul>
+<li><p>A class to manage entities within the ECS.</p></li>
+<li><dl class="simple">
+<dt>Key Elements:</dt><dd><ul>
+<li><p><cite>_entityl</cite>: A list of shared pointers to entities.</p></li>
+<li><p>Methods for creating, adding, retrieving, and deleting entities.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Derived Classes: entity.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>entity</strong>:</dt><dd><ul>
+<li><p>Represents an entity within the ECS.</p></li>
+<li><dl class="simple">
+<dt>Key Elements:</dt><dd><ul>
+<li><p><cite>_id</cite>: Unique identifier for the entity.</p></li>
+<li><p><cite>_components</cite>: A list of shared pointers to components.</p></li>
+<li><p>Template methods for adding, removing, and accessing components for the entity.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<p>The <strong>CollisionSystem</strong> class is responsible for checking collisions between entities in the game.
+CollisionSystem collisionSystem;
+bool isCollision = collisionSystem.checkCollision(entityID1, entityID2);</p>
 <p>### Graphics Library</p>
 <ul class="simple">
 <li><p><strong>Supported Features</strong>: An overview of supported graphics features, including 2D sprite rendering, shaders, and parallax scrolling.</p></li>
@@ -126,7 +264,7 @@
 <h3>Navigation</h3>
 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Developpment Section ( R-Type Video Game Project)</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Developpment Section (R-Type Video Game Project)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Game_mechanics.html">Developpment Section ( Game mechanics for R-Type )</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Installation.html">Developpment Section (Installation for R-Type )</a></li>
 </ul>
@@ -179,3 +317,98 @@
     
   </body>
 </html>
+
+<style>
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set a background color and font for the entire page */
+body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+
+/* Style the main header */
+h1 {
+  font-size: 28px;
+  text-align: center;
+  margin: 20px 0;
+  color: #333;
+}
+
+/* Style section headers */
+h2 {
+  font-size: 20px;
+  color: #555;
+  margin-top: 30px;
+}
+
+/* Style links */
+a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+/* Style the navigation menu */
+.sphinxsidebar {
+  background-color: #222;
+  color: #fff;
+  padding: 20px;
+}
+
+.sphinxsidebar h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.sphinxsidebar ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.sphinxsidebar li {
+  margin: 5px 0;
+}
+
+.sphinxsidebar a {
+  color: #fff;
+}
+
+/* Style the content area */
+.body {
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+}
+
+/* Footer styles */
+.footer {
+  text-align: center;
+  background-color: #222;
+  color: #fff;
+  padding: 10px;
+}
+
+/* Add responsive styles for smaller screens */
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  .sphinxsidebar {
+    display: none;
+  }
+
+  .body {
+    margin: 0;
+    padding: 10px;
+  }
+}
+</style>
