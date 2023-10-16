@@ -1,0 +1,72 @@
+=================================================
+Developpment Section ( R-Type Video Game Project)
+=================================================
+
+## Development
+
+### Contributing
+
+- **Coding Standards**: Please follow our coding standards when contributing to the project. You can find the coding style guide in the [CONTRIBUTING.md](CONTRIBUTING.md) file.
+
+- **Code of Conduct**: We adhere to a code of conduct to ensure a friendly and inclusive community. Please read our [Code of Conduct](CODE_OF_CONDUCT.md) before contributing.
+
+- **Submitting Contributions**: To contribute to this project, follow these steps:
+    1. Fork the repository.
+    2. Create a new branch for your feature or bug fix.
+    3. Make your changes, add tests if applicable, and ensure all tests pass.
+    4. Create a pull request, and our team will review it.
+
+### Building
+
+- **Prerequisites**: Ensure you have the following prerequisites installed:
+    - C++ compiler (g++)
+    - CMake (version 3.0 or higher)
+    - SFML library (version 2.5.1)
+
+- **Build Instructions**: Follow these steps to build the game from the source code:
+
+    ```bash
+    mkdir build
+    cd build
+    cmake ..
+    make
+    ```
+
+- **Configuration**: If necessary, configure your build by setting environment variables or options. For example, you can use `-DCMAKE_BUILD_TYPE=Release` for a release build.
+
+- **Troubleshooting**: If you encounter build issues, consult our [Troubleshooting Guide](TROUBLESHOOTING.md) for solutions to common problems.
+
+### Debugging
+
+- **Debugging Tips**: Here are some debugging tips for working on the project:
+    - Use GDB or a similar debugger for C++ to step through your code.
+    - Print debugging information using `std::cout` or custom log functions.
+    - Set breakpoints in your IDE for interactive debugging.
+
+- **Common Issues**: If you come across common issues or errors, consult our [Common Issues](TROUBLESHOOTING.md#common-issues) section in the troubleshooting guide for solutions.
+
+## API Reference
+
+### Game Engine
+
+- **Class Descriptions**: Detailed descriptions of the core game engine classes, including `Game`, `Player`, and `Enemy`.
+
+- **Functions**: Documented functions and methods available in the game engine, including `startGame()`, `updatePlayerPosition()`, and `spawnEnemy()`.
+
+- **How to Use**: Practical examples and use cases to help you understand how to use the game engine components in your own code.
+
+### Graphics Library
+
+- **Supported Features**: An overview of supported graphics features, including 2D sprite rendering, shaders, and parallax scrolling.
+
+- **API Usage**: Documentation on how to use the graphics library, including initialization, rendering assets, and handling textures.
+
+- **Common Tasks**: Code samples for common graphics-related tasks, such as rendering player animations, creating particle effects, and handling UI elements.
+
+### Audio Engine
+
+- **Audio Formats**: Information on the supported audio formats, such as WAV and MP3, and best practices for audio asset management.
+
+- **Audio Assets**: Guidance on integrating audio assets into the game and using functions like `playSound()` and `stopMusic()`.
+
+- **Working with Audio**: Code snippets demonstrating how to play background music, trigger sound effects, and control audio in your game.
