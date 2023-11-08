@@ -1,0 +1,50 @@
+=========================
+Guidelines and Tutorials
+=========================
+
+R-Type Tutorial
+-------------------
+
+R-Type is a classic shoot'em up (shmup) game where you control a spaceship and battle against formidable enemies and bosses. The game offers two game modes: single-player (player) and multiplayer (multiplayer). In this tutorial, we will guide you through the basics of the game and explain how to play.
+
+1. Installation
+------------------
+
+Before you begin playing, make sure you have correctly installed the game by running the provided binaries.
+
+2. Game Modes
+---------------
+
+R-Type offers two game modes:
+
+**Single-Player Mode (Player) :**
+In this mode, you play solo and face off against enemies on your own. Your goal is to survive waves of enemies, eliminate end-level bosses, and progress through the levels.
+
+
+**Multiplayer Mode (Multiplayer) :**
+In multiplayer mode, you can team up with other players. Here's how it works:
+
+- When you log in, you have the option to create a game section that other players can join.
+- Players join your section to form a team.
+- Together, you battle enemies and bosses cooperatively to advance in the game.
+
+3. Controls
+------------
+
+The game controls are simple:
+
+- Use the arrow keys to move your spaceship up, down, left, and right.
+- Press the fire key to shoot projectiles at enemies and bosses. Eliminate them before they hit you.
+- Be agile and dodge enemy shots to avoid taking damage. Your health decreases each time you're hit, and if your health bar empties, you'll lose.
+
+4. Objective
+-------------
+
+The main objective in R-Type is to progress through levels by eliminating enemies and bosses. At the end of each level, you will face a formidable boss that you must defeat to move on to the next level. In multiplayer mode, teamwork with your team is crucial to defeat bosses.
+
+5. Conclusion
+--------------
+
+That's all you need to get started with R-Type. Choose your game mode, master the controls, eliminate enemies and bosses, and advance through the levels. Let the adventure begin!
+
+Have fun, and may the force be with you in the world of R-Type!

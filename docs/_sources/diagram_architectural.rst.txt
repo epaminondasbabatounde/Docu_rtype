@@ -1,0 +1,17 @@
+=========================
+Diagram Architectural
+=========================
+
+The architectural diagram below provides an overview of our project's structure. It illustrates the key components of the system, their interconnections, and the data flows between them. This diagram is essential for understanding the overall organization of our application.
+
+**ECS Diagram**
+-----------------
+
+.. image:: ECS.jpeg
+   :alt: Diagramme Architectural de l'ECS
+
+**Server Diagram**
+-------------------
+
+.. image:: Server.png
+   :alt: Diagramme Architectural du serveur

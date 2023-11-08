@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>User manual &#8212; R_type&#39;s documentation version 1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css?v=514cf933" />
+    
+    <script src="_static/documentation_options.js?v=5c1c9e08"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Diagram Architectural" href="diagram_architectural.html" />
+    <link rel="prev" title="Developer documentation" href="developer.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="diagram_architectural.html" title="Diagram Architectural"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="developer.html" title="Developer documentation"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">R_type&#39;s documentation version 1.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="developer.html" accesskey="U">Developer documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">User manual</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="user-manual">
+<h1>User manual<a class="headerlink" href="#user-manual" title="Link to this heading">¶</a></h1>
+<p>First of all our project is cross platform.
+So to use it, follow the instructions below based on your platform.</p>
+<p><strong>For Linux:</strong></p>
+<ol class="arabic">
+<li><p><strong>Install Necessary Dependencies:</strong></p>
+<p>To set up and run the project on Linux, you need to install the required dependencies using <cite>Conan</cite>. Open your terminal and execute the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conan<span class="w"> </span>install<span class="w"> </span>.<span class="w"> </span>--output-folder<span class="o">=</span>build<span class="w"> </span>--build<span class="o">=</span>missing
+</pre></div>
+</div>
+</li>
+<li><p><strong>Navigate to the Build Directory:</strong></p>
+<p>After installing the dependencies, navigate to the <cite>build</cite> directory. Use the following command to change your current directory:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>build
+</pre></div>
+</div>
+</li>
+<li><p><strong>Configure the Project with CMake:</strong></p>
+<p>Configure the project using CMake by running the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cmake<span class="w"> </span>..
+</pre></div>
+</div>
+</li>
+<li><p><strong>Build the Project with Make:</strong></p>
+<p>Build the project using the <cite>make</cite> command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make
+</pre></div>
+</div>
+</li>
+</ol>
+<p><strong>For Windows:</strong></p>
+<ol class="arabic">
+<li><p><strong>Install Necessary Dependencies:</strong></p>
+<p>To build and run the project on Windows, you should also install the necessary dependencies using <cite>Conan</cite>. Open your command prompt and execute the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conan<span class="w"> </span>install<span class="w"> </span>.<span class="w"> </span>--output-folder<span class="o">=</span>build<span class="w"> </span>--build<span class="o">=</span>missing
+</pre></div>
+</div>
+</li>
+<li><p><strong>Navigate to the Build Directory:</strong></p>
+<p>After installing the dependencies, navigate to the <cite>build</cite> directory using the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>build
+</pre></div>
+</div>
+</li>
+<li><p><strong>Configure the Project with CMake for Visual Studio:</strong></p>
+<p>Configure the project with CMake, specifying the generator for Visual Studio. Replace <cite>[Visual Studio Version]</cite> with your specific version.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cmake<span class="w"> </span>-G<span class="w"> </span><span class="s2">&quot;Visual Studio [Visual Studio Version]&quot;</span><span class="w"> </span>-A<span class="w"> </span>x64<span class="w"> </span>..
+</pre></div>
+</div>
+</li>
+<li><p><strong>Build the R_Type Executable:</strong></p>
+<p>Look for the <cite>R_type.exe</cite> executable and build it.</p>
+</li>
+</ol>
+<p>Once you have completed the platform-specific steps mentioned above, you will have the necessary binaries to run the R-Type project.</p>
+<section id="building-the-project">
+<h2>Building the Project<a class="headerlink" href="#building-the-project" title="Link to this heading">¶</a></h2>
+<p>If you ever need to rebuild the project, you can follow the building steps mentioned above for your platform. Make sure to run <cite>cmake</cite> and <cite>make</cite> on Linux and configure the project using the appropriate Visual Studio version on Windows.</p>
+</section>
+<section id="running-the-project">
+<h2>Running the Project<a class="headerlink" href="#running-the-project" title="Link to this heading">¶</a></h2>
+<p>To run the R-Type project, execute the following binaries:</p>
+<p><strong>On Linux:</strong></p>
+<ul>
+<li><p>Run the following binaries</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./r-type_server
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./r-type_client
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>On Windows:</strong></p>
+<ul>
+<li><p>Run the following binaries</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>r-type_server.exe
+r-type_client.exe
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">User manual</a><ul>
+<li><a class="reference internal" href="#building-the-project">Building the Project</a></li>
+<li><a class="reference internal" href="#running-the-project">Running the Project</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="developer.html"
+                          title="previous chapter">Developer documentation</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="diagram_architectural.html"
+                          title="next chapter">Diagram Architectural</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/user_manual.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="diagram_architectural.html" title="Diagram Architectural"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="developer.html" title="Developer documentation"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">R_type&#39;s documentation version 1.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="developer.html" >Developer documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">User manual</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2023, Babatounde EPAMINONDAS Nazir ALI-ZATO Hanim MOUSSA-YARI ADEYEMI Mounirou Enora AMADOU Neomie MIGAN.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    </div>
+  </body>
+</html>

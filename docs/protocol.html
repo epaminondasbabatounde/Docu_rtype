@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Protocol Documentation for R-Type Game Server and Client &#8212; R_type&#39;s documentation version 1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css?v=514cf933" />
+    
+    <script src="_static/documentation_options.js?v=5c1c9e08"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Guidelines and Tutorials" href="guidelines_tutorials.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="guidelines_tutorials.html" title="Guidelines and Tutorials"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">R_type&#39;s documentation version 1.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Protocol Documentation for R-Type Game Server and Client</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="protocol-documentation-for-r-type-game-server-and-client">
+<h1>Protocol Documentation for R-Type Game Server and Client<a class="headerlink" href="#protocol-documentation-for-r-type-game-server-and-client" title="Link to this heading">¶</a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">¶</a></h2>
+<p>Network communication is an essential element of the R-Type server and its associated client’s architecture. This protocol documentation explains in detail how this communication functions and provides information on how data is exchanged between the server and clients.</p>
+</section>
+<section id="types-of-transmitted-data">
+<h2>Types of Transmitted Data<a class="headerlink" href="#types-of-transmitted-data" title="Link to this heading">¶</a></h2>
+<p>In our server-client architecture, various types of data are exchanged, including:</p>
+<ul class="simple">
+<li><p><em>Client Commands</em>: To initiate actions within the game.</p></li>
+<li><p><em>User Data</em>: Information specific to each user.</p></li>
+<li><p><em>System States</em>: Information about the current state of the game.</p></li>
+<li><p><em>Server Responses</em>: Responses to client commands.</p></li>
+</ul>
+</section>
+<section id="timing-and-communication-frequency">
+<h2>Timing and Communication Frequency<a class="headerlink" href="#timing-and-communication-frequency" title="Link to this heading">¶</a></h2>
+<p>Communication between the server and clients is triggered by different events. Client commands are transmitted instantly, while server state updates are periodically sent.</p>
+</section>
+<section id="encoding-and-packet-structure">
+<h2>Encoding and Packet Structure<a class="headerlink" href="#encoding-and-packet-structure" title="Link to this heading">¶</a></h2>
+<p>Data is exchanged in the form of structured packets, with headers containing information such as packet length and message type. The choice of protocols, data formats, and encoding may vary.</p>
+</section>
+<section id="processing-received-data">
+<h2>Processing Received Data<a class="headerlink" href="#processing-received-data" title="Link to this heading">¶</a></h2>
+<p>The processing of received data depends on its type, such as client commands, user data, or server state updates.</p>
+</section>
+<section id="communication-schemes">
+<h2>Communication Schemes<a class="headerlink" href="#communication-schemes" title="Link to this heading">¶</a></h2>
+<p>Various communication schemes are used, including request-response commands, state updates, event broadcasting, and one-way communication.</p>
+</section>
+<section id="error-handling">
+<h2>Error Handling<a class="headerlink" href="#error-handling" title="Link to this heading">¶</a></h2>
+<p>Error management is crucial to ensure the reliability of network communication. Strategies include handling exceptions, retry mechanisms, error messages, and error detection and handling.</p>
+</section>
+<section id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading">¶</a></h2>
+<p>This documentation ensures understanding and reliability in communication between the R-Type game server and its clients, providing a responsive and dependable gaming experience for all players while allowing the server and client to adapt in the event of errors or communication interruptions.</p>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Protocol Documentation for R-Type Game Server and Client</a><ul>
+<li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#types-of-transmitted-data">Types of Transmitted Data</a></li>
+<li><a class="reference internal" href="#timing-and-communication-frequency">Timing and Communication Frequency</a></li>
+<li><a class="reference internal" href="#encoding-and-packet-structure">Encoding and Packet Structure</a></li>
+<li><a class="reference internal" href="#processing-received-data">Processing Received Data</a></li>
+<li><a class="reference internal" href="#communication-schemes">Communication Schemes</a></li>
+<li><a class="reference internal" href="#error-handling">Error Handling</a></li>
+<li><a class="reference internal" href="#conclusion">Conclusion</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="guidelines_tutorials.html"
+                          title="previous chapter">Guidelines and Tutorials</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/protocol.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="guidelines_tutorials.html" title="Guidelines and Tutorials"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">R_type&#39;s documentation version 1.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Protocol Documentation for R-Type Game Server and Client</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2023, Babatounde EPAMINONDAS Nazir ALI-ZATO Hanim MOUSSA-YARI ADEYEMI Mounirou Enora AMADOU Neomie MIGAN.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    </div>
+  </body>
+</html>

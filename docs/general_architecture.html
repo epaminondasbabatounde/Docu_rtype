@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Basic Architecture Documentation &#8212; R_type&#39;s documentation version 1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css?v=514cf933" />
+    
+    <script src="_static/documentation_options.js?v=5c1c9e08"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Guidelines and Tutorials" href="guidelines_tutorials.html" />
+    <link rel="prev" title="Diagram Architectural" href="diagram_architectural.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="guidelines_tutorials.html" title="Guidelines and Tutorials"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="diagram_architectural.html" title="Diagram Architectural"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">R_type&#39;s documentation version 1.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="developer.html" accesskey="U">Developer documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Basic Architecture Documentation</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="basic-architecture-documentation">
+<h1>Basic Architecture Documentation<a class="headerlink" href="#basic-architecture-documentation" title="Link to this heading">¶</a></h1>
+<p>This documentation describes the basic architecture of the application, including key components such as the user interface, the main API, and entry points.</p>
+<section id="user-interface">
+<h2>1. User Interface<a class="headerlink" href="#user-interface" title="Link to this heading">¶</a></h2>
+<p>The user interface is the part of the application with which users interact. It includes two modes of interaction:</p>
+<section id="graphical-user-interface-gui">
+<h3>1.1 Graphical User Interface (GUI)<a class="headerlink" href="#graphical-user-interface-gui" title="Link to this heading">¶</a></h3>
+<p>The GUI provides a visual interface for users and includes the following elements:</p>
+<ul class="simple">
+<li><p>“Multiplay” and “Exit” Buttons: These buttons allow users to start a multiplayer game or exit the game.</p></li>
+<li><p>Movement and Shooting Inputs: Users can use these inputs to control the movement and shooting of in-game elements.</p></li>
+<li><p>Communication with the Server: The GUI communicates with the server to exchange game data and manage user actions.</p></li>
+</ul>
+</section>
+<section id="command-line-interface-cli">
+<h3>1.2 Command Line Interface (CLI)<a class="headerlink" href="#command-line-interface-cli" title="Link to this heading">¶</a></h3>
+<p>The command-line interface is an option for users who prefer text-based interaction. Although your description indicates that it is not implemented, you may consider adding it for users who prefer this method of interaction.</p>
+</section>
+</section>
+<section id="main-api">
+<h2>2. Main API<a class="headerlink" href="#main-api" title="Link to this heading">¶</a></h2>
+<p>The main API is the core of the application, exposing the program’s features. It consists of the following elements:</p>
+<section id="endpoints">
+<h3>2.1 Endpoints<a class="headerlink" href="#endpoints" title="Link to this heading">¶</a></h3>
+<p>API endpoints are access points that allow clients (such as the GUI) to interact with the application. In the context of your R-Type game, they may include:</p>
+<ul class="simple">
+<li><p>The “main” entry point on the client side (R-Type client): This entry point takes the SFML window as a parameter and manages the game’s user interface.</p></li>
+<li><p>The “main” entry point on the server side (R-Type server): This entry point takes the server as a parameter and manages server operations, such as managing multiplayer games.</p></li>
+</ul>
+</section>
+<section id="request-handling">
+<h3>2.2 Request Handling<a class="headerlink" href="#request-handling" title="Link to this heading">¶</a></h3>
+<p>The main API handles requests from clients, such as requests for multiplayer games. Here’s how it works:</p>
+<ul class="simple">
+<li><p>For the “Play” mode: Game data is directly sent by the server to the client. This communication allows the client to receive real-time game information and react to it.</p></li>
+<li><p>For the “Multiplay” mode: The client must first join the multiplayer section before the server sends game data. This multiplayer mode connection step allows players to be grouped before starting a game.</p></li>
+</ul>
+</section>
+</section>
+<section id="entry-points">
+<h2>3. Entry Points<a class="headerlink" href="#entry-points" title="Link to this heading">¶</a></h2>
+<p>Entry points are essential starting points for the application. They initialize the application, configure components, and launch relevant parts. Here’s how they are structured:</p>
+<section id="main-startup-point">
+<h3>3.1 Main Startup Point<a class="headerlink" href="#main-startup-point" title="Link to this heading">¶</a></h3>
+<p>The main startup point is the initial entry point of the application. It is responsible for:</p>
+<ul class="simple">
+<li><p>Initializing the application: This step may include initializing essential application components.</p></li>
+<li><p>Configuring Components: The entry point configures components such as the GUI or the server based on the application’s requirements.</p></li>
+<li><p>Launching the User Interface or API: Depending on the required interaction, the startup point launches the user interface (GUI) or the main API (server).</p></li>
+</ul>
+<p>This documentation details the essential components of your application, including user interaction, the main API, and entry points. It provides a comprehensive overview of the basic architecture of your application.</p>
+</section>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Basic Architecture Documentation</a><ul>
+<li><a class="reference internal" href="#user-interface">1. User Interface</a><ul>
+<li><a class="reference internal" href="#graphical-user-interface-gui">1.1 Graphical User Interface (GUI)</a></li>
+<li><a class="reference internal" href="#command-line-interface-cli">1.2 Command Line Interface (CLI)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#main-api">2. Main API</a><ul>
+<li><a class="reference internal" href="#endpoints">2.1 Endpoints</a></li>
+<li><a class="reference internal" href="#request-handling">2.2 Request Handling</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#entry-points">3. Entry Points</a><ul>
+<li><a class="reference internal" href="#main-startup-point">3.1 Main Startup Point</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="diagram_architectural.html"
+                          title="previous chapter">Diagram Architectural</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="guidelines_tutorials.html"
+                          title="next chapter">Guidelines and Tutorials</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/general_architecture.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="guidelines_tutorials.html" title="Guidelines and Tutorials"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="diagram_architectural.html" title="Diagram Architectural"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">R_type&#39;s documentation version 1.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="developer.html" >Developer documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Basic Architecture Documentation</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2023, Babatounde EPAMINONDAS Nazir ALI-ZATO Hanim MOUSSA-YARI ADEYEMI Mounirou Enora AMADOU Neomie MIGAN.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    </div>
+  </body>
+</html>

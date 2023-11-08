@@ -1,0 +1,61 @@
+Basic Architecture Documentation
+===================================
+
+This documentation describes the basic architecture of the application, including key components such as the user interface, the main API, and entry points.
+
+1. User Interface
+------------------
+
+The user interface is the part of the application with which users interact. It includes two modes of interaction:
+
+1.1 Graphical User Interface (GUI)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The GUI provides a visual interface for users and includes the following elements:
+
+- "Multiplay" and "Exit" Buttons: These buttons allow users to start a multiplayer game or exit the game.
+- Movement and Shooting Inputs: Users can use these inputs to control the movement and shooting of in-game elements.
+- Communication with the Server: The GUI communicates with the server to exchange game data and manage user actions.
+
+1.2 Command Line Interface (CLI)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The command-line interface is an option for users who prefer text-based interaction. Although your description indicates that it is not implemented, you may consider adding it for users who prefer this method of interaction.
+
+2. Main API
+-----------
+
+The main API is the core of the application, exposing the program's features. It consists of the following elements:
+
+2.1 Endpoints
+~~~~~~~~~~~~~~~
+
+API endpoints are access points that allow clients (such as the GUI) to interact with the application. In the context of your R-Type game, they may include:
+
+- The "main" entry point on the client side (R-Type client): This entry point takes the SFML window as a parameter and manages the game's user interface.
+- The "main" entry point on the server side (R-Type server): This entry point takes the server as a parameter and manages server operations, such as managing multiplayer games.
+
+2.2 Request Handling
+~~~~~~~~~~~~~~~~~~~
+
+The main API handles requests from clients, such as requests for multiplayer games. Here's how it works:
+
+- For the "Play" mode: Game data is directly sent by the server to the client. This communication allows the client to receive real-time game information and react to it.
+
+- For the "Multiplay" mode: The client must first join the multiplayer section before the server sends game data. This multiplayer mode connection step allows players to be grouped before starting a game.
+
+3. Entry Points
+---------------
+
+Entry points are essential starting points for the application. They initialize the application, configure components, and launch relevant parts. Here's how they are structured:
+
+3.1 Main Startup Point
+~~~~~~~~~~~~~~~~~~~~~~~
+
+The main startup point is the initial entry point of the application. It is responsible for:
+
+- Initializing the application: This step may include initializing essential application components.
+- Configuring Components: The entry point configures components such as the GUI or the server based on the application's requirements.
+- Launching the User Interface or API: Depending on the required interaction, the startup point launches the user interface (GUI) or the main API (server).
+
+This documentation details the essential components of your application, including user interaction, the main API, and entry points. It provides a comprehensive overview of the basic architecture of your application.

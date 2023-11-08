@@ -1,0 +1,28 @@
+Getting Started
+=====================================
+
+The "Reimagined R-Type" project involves designing a modern version of the classic video game R-Type by developing both a multi-threaded server and a graphical client. R-Type, a horizontal shoot'em up (Shoot'em Up) game, was highly popular among gamers in the 90s and had various ports, spin-offs, and remakes. Our goal is to recreate this iconic game while bringing significant improvements to it.
+
+Prototype Phase
+---------------
+
+In the initial phase, we will develop the basic architecture of the game and deliver a functional prototype. This will allow us to establish the project's foundations by setting up a playable game system. This initial phase will enable us to test the game mechanics and ensure that we meet the basic requirements.
+
+Expansion Phase
+---------------
+
+The second phase involves expanding and enhancing the prototype. We will explore various specialized areas of the game by adding features and improvements to provide an even better experience for players. These enhancements will include elements that were not present in the original game, making it even more appealing to today's gamers.
+
+Key Features
+------------
+
+Here are the key features of our version of R-Type:
+
+- **Networked Gameplay**: Players will have the option to play in a networked environment, with support for one to four players. They can join forces to battle the common enemy, the Bydos.
+
+- **Game Engine Architecture**: Our internal game design will demonstrate architectural patterns of a real game engine. This will ensure the robustness and scalability of the game.
+
+Inspiration and References
+---------------------------
+
+We draw inspiration from well-known similar games such as the Gradius series and Blazing Star on Neo Geo. Our goal is to capture the spirit of the R-Type game while bringing innovations to delight both new and old players.

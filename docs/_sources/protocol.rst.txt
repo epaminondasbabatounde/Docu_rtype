@@ -1,0 +1,47 @@
+Protocol Documentation for R-Type Game Server and Client
+==========================================================
+
+Introduction
+------------
+
+Network communication is an essential element of the R-Type server and its associated client's architecture. This protocol documentation explains in detail how this communication functions and provides information on how data is exchanged between the server and clients.
+
+Types of Transmitted Data
+---------------------------
+
+In our server-client architecture, various types of data are exchanged, including:
+
+- *Client Commands*: To initiate actions within the game.
+- *User Data*: Information specific to each user.
+- *System States*: Information about the current state of the game.
+- *Server Responses*: Responses to client commands.
+
+Timing and Communication Frequency
+------------------------------------
+
+Communication between the server and clients is triggered by different events. Client commands are transmitted instantly, while server state updates are periodically sent.
+
+Encoding and Packet Structure
+---------------------------------
+
+Data is exchanged in the form of structured packets, with headers containing information such as packet length and message type. The choice of protocols, data formats, and encoding may vary.
+
+Processing Received Data
+-------------------------------
+
+The processing of received data depends on its type, such as client commands, user data, or server state updates.
+
+Communication Schemes
+------------------------
+
+Various communication schemes are used, including request-response commands, state updates, event broadcasting, and one-way communication.
+
+Error Handling
+--------------------
+
+Error management is crucial to ensure the reliability of network communication. Strategies include handling exceptions, retry mechanisms, error messages, and error detection and handling.
+
+Conclusion
+----------
+
+This documentation ensures understanding and reliability in communication between the R-Type game server and its clients, providing a responsive and dependable gaming experience for all players while allowing the server and client to adapt in the event of errors or communication interruptions.

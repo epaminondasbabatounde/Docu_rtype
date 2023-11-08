@@ -1,0 +1,103 @@
+=========================
+User manual
+=========================
+
+First of all our project is cross platform.
+So to use it, follow the instructions below based on your platform.
+
+**For Linux:**
+
+1. **Install Necessary Dependencies:**
+   
+   To set up and run the project on Linux, you need to install the required dependencies using `Conan`. Open your terminal and execute the following command:
+
+   .. code-block:: bash
+
+      conan install . --output-folder=build --build=missing
+
+2. **Navigate to the Build Directory:**
+
+   After installing the dependencies, navigate to the `build` directory. Use the following command to change your current directory:
+
+   .. code-block:: bash
+
+      cd build
+
+3. **Configure the Project with CMake:**
+
+   Configure the project using CMake by running the following command:
+
+   .. code-block:: bash
+
+      cmake ..
+
+4. **Build the Project with Make:**
+
+   Build the project using the `make` command:
+
+   .. code-block:: bash
+
+      make
+
+**For Windows:**
+
+1. **Install Necessary Dependencies:**
+
+   To build and run the project on Windows, you should also install the necessary dependencies using `Conan`. Open your command prompt and execute the following command:
+
+   .. code-block:: bash
+
+      conan install . --output-folder=build --build=missing
+
+2. **Navigate to the Build Directory:**
+
+   After installing the dependencies, navigate to the `build` directory using the following command:
+
+   .. code-block:: bash
+
+      cd build
+
+3. **Configure the Project with CMake for Visual Studio:**
+
+   Configure the project with CMake, specifying the generator for Visual Studio. Replace `[Visual Studio Version]` with your specific version.
+
+   .. code-block:: bash
+
+      cmake -G "Visual Studio [Visual Studio Version]" -A x64 ..
+
+4. **Build the R_Type Executable:**
+
+   Look for the `R_type.exe` executable and build it.
+
+Once you have completed the platform-specific steps mentioned above, you will have the necessary binaries to run the R-Type project.
+
+Building the Project
+---------------------
+
+If you ever need to rebuild the project, you can follow the building steps mentioned above for your platform. Make sure to run `cmake` and `make` on Linux and configure the project using the appropriate Visual Studio version on Windows.
+
+Running the Project
+-------------------
+
+To run the R-Type project, execute the following binaries:
+
+**On Linux:**
+
+- Run the following binaries
+
+   .. code-block:: bash
+
+      ./r-type_server
+
+   .. code-block:: bash
+
+      ./r-type_client
+
+**On Windows:**
+
+- Run the following binaries
+
+   .. code-block:: bash
+
+      r-type_server.exe
+      r-type_client.exe
